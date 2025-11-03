@@ -4,6 +4,14 @@
 - 목적: **CKA 취득**을 위한 실습/노트/스크립트 **버전관리**
 - 운영: 모든 실습은 `~/cka-study`에 기록하고 **매일 푸시** (`gsave` 단축 사용)
 
+## ⚡️ CKA 단기 집중 진행 현황
+
+| 주차 | 주요 주제 | 세부 항목 | 일정 | 상태 |
+|------|------------|-----------|-------|------|
+| 1주차 | Core Concepts + Networking | Pod / ReplicaSet / Deployment / Service / Ingress / NetworkPolicy | 11/4~11/10 | 🔄 진행중 |
+| 2주차 | Storage + Security | PV / PVC / ConfigMap / Secret / ServiceAccount / RoleBinding / PodSecurityContext | 11/11~11/17 | ☐ 예정 |
+| 3주차 | Troubleshooting + Mock | kubelet / etcd / logs / CrashLoopBackOff / Killer.sh 모의고사 / Docs 탐색 연습 | 11/18~11/24 | ☐ 예정 |
+
 ## 📆 진행 현황
 | 주차 | 주제 | 상태 |
 |---|---|---|
