@@ -18,6 +18,8 @@
 
 - 체크 방법: 각 주차 노트 파일에서 `- [x]` 로 진행 체크 후 `gsave`로 커밋/푸시.
 
-## 🔒 보안
-- 이 저장소는 **Private 권장**.
-- `.gitignore`에 `admin.conf`, `.kube/`, 인증서/키, `logs/` 제외.
+## 자동완성 설정
+sudo dnf install -y bash-completion
+source /etc/profile.d/bash_completion.sh
+source <(kubectl completion bash)
+echo 'source <(kubectl completion bash)' >> ~/.bashrc
