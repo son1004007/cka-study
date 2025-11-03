@@ -1,0 +1,17 @@
+# kube/cluster & certs
+.kube/
+admin.conf
+/etc/kubernetes/
+*.crt
+*.key
+*.pem
+
+# logs를 아예 올리지 않으려면 아래 유지
+#logs/
+
+# 편집기/캐시
+#*.log
+*.bak
+*.swp
+.DS_Store
+

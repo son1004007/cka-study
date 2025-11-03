@@ -1,0 +1,650 @@
+2025-11-04 07:59:04 [2227650] onycom@master:/home/onycom -> 2025-11-04 07:59:04  sudo ./rhel9_u01_u70_fullcheck_v022a.sh
+2025-11-04 07:59:12 [2227650] onycom@master:/home/onycom -> 2025-11-04 07:59:04  sudo ./rhel9_u01_u70_fullcheck_v022a.sh
+2025-11-04 07:59:12 [2227650] onycom@master:/home/onycom -> 2025-11-04 07:59:04  sudo ./rhel9_u01_u70_fullcheck_v022a.sh
+2025-11-04 07:59:20 [2227650] onycom@master:/home/onycom -> 2025-11-04 07:59:20  cat .bashrc 
+2025-11-04 07:59:20 [2227650] onycom@master:/home/onycom -> 2025-11-04 07:59:20  cat .bashrc 
+2025-11-04 08:03:33 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:03:33  vi .bashrc
+2025-11-04 08:04:09 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:03:33  vi .bashrc
+2025-11-04 08:04:13 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:03:33  vi .bashrc
+2025-11-04 08:04:13 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:04:13  source ~/.bashrc
+2025-11-04 08:04:13 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:04:13  source ~/.bashrc
+2025-11-04 08:04:14 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:04:13  source ~/.bashrc
+2025-11-04 08:04:17 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:04:17  ls
+2025-11-04 08:04:17 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:04:17  ls
+2025-11-04 08:04:19 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:04:17  ls
+2025-11-04 08:04:19 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:04:17  ls
+2025-11-04 08:05:35 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:35  ls ~/cka-study/logs
+2025-11-04 08:05:35 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:35  ls ~/cka-study/logs
+2025-11-04 08:05:46 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:46  cat ~/cka-study/logs/session-20251104_0759.log 
+2025-11-04 08:05:46 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:46  cat ~/cka-study/logs/session-20251104_0759.log 
+2025-11-04 08:05:50 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:50 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:51 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:51 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:51 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:51 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:51 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:51 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:51 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:52 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:52 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:53 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:05:57 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:06:01 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:06:01 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:06:01 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:06:02 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:05:50  2RR0;136;0c2RR0;136;0c2RR0;136;0c2RR0;136;0c
+2025-11-04 08:06:04 [2227650] onycom@master:/home/onycom -> 2025-11-04 08:06:04  exit
+2025-11-04 08:06:22 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:06:22  exit
+2025-11-04 08:13:51 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:13:51  echo "alias gsave='cd ~/cka-study && git add . && git commit -m \"auto: \$(date +%Y%m%d_%H%M)\" && git push'" >> ~/.bashrc
+2025-11-04 08:13:51 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:13:51  source ~/.bashrc
+2025-11-04 08:13:51 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:13:51  source ~/.bashrc
+2025-11-04 08:13:51 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:13:51  # 사용할 때: gsave
+2025-11-04 08:13:54 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:13:54  crontab -e
+2025-11-04 08:14:09 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:14:09  0 22 * * * cd $HOME/cka-study && git add . && git commit -m "auto: $(date +\%F \%T)" && git push >> $HOME/cka-study/push.log 2>&1
+2025-11-04 08:14:09 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:14:09  0 22 * * * cd $HOME/cka-study && git add . && git commit -m "auto: $(date +\%F \%T)" && git push >> $HOME/cka-study/push.log 2>&1
+2025-11-04 08:14:17 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:14:17  crontab -e
+2025-11-04 08:14:32 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:14:17  crontab -e
+2025-11-04 08:14:38 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:14:38  crontab -l
+2025-11-04 08:14:38 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:14:38  crontab -l
+2025-11-04 08:15:07 [2230102] onycom@master:/home/onycom -> 2025-11-04 08:15:07  cd cka-study/
+2025-11-04 08:15:07 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:15:07  cd cka-study/
+2025-11-04 08:15:12 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:15:12  vi .gitignore
+2025-11-04 08:15:39 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:15:12  vi .gitignore
+2025-11-04 08:16:36 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:36  cd cka-study/
+2025-11-04 08:16:36 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:36  cd cka-study/
+2025-11-04 08:16:37 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:36  cd cka-study/
+2025-11-04 08:16:37 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:36  cd cka-study/
+2025-11-04 08:16:43 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:43  mkdir -p **** 01_core-concepts 02_networking 03_storage 04_scheduling 05_security 06_troubleshooting 07_mock-tests 08_resources
+2025-11-04 08:16:43 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:43  mkdir -p **** 01_core-concepts 02_networking 03_storage 04_scheduling 05_security 06_troubleshooting 07_mock-tests 08_resources
+2025-11-04 08:16:55 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:55  ls
+2025-11-04 08:16:55 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:55  ls
+2025-11-04 08:16:59 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:59  vi README.md 
+2025-11-04 08:17:34 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:16:59  vi README.md 
+2025-11-04 08:17:53 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:17:53  cat > 08_resources/study_plan.md <<'EOF'
+# CKA 8주 로드맵 (업무 병행형)
+
+## 목표
+- 8주 내 CKA 합격(실기). Kubernetes 운영/트러블슈팅 역량 확보.
+
+## 주차별 계획(요약)
+) Core Concepts: Pod/Deployment/Service, kubectl 숙련  
+) Workloads & Scheduling: Label/Selector, Taint/Toleration, Affinity, Job/CronJob, Resource Requests/Limits  
+) Services & Networking: ClusterIP/NodePort/Ingress, DNS, NetworkPolicy  
+) Storage & Config: PV/PVC/StorageClass, ConfigMap/Secret, VolumeMount  
+) Security & RBAC: SA, Role/ClusterRole, RoleBinding, PodSecurityContext  
+) Troubleshooting: CrashLoop, Node NotReady, kubelet, etcd 백업/복원  
+) Mock: Killer.sh 2회, 오답노트, 시간관리  
+) 실전정리: kubectl 단축, dry-run, 공식 Docs 빠른 탐색
+
+## 일일 루틴(예시)
+- 실습 60~90분 → `notes.md` 기록 → `gsave` 푸시  
+- 쉬운 문제 3분 내 해결 습관화, `kubectl explain`/`--dry-run=client -o yaml` 자주 활용
+EOF
+2025-11-04 08:17:53 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:17:53  cat > 08_resources/study_plan.md <<'EOF'
+# CKA 8주 로드맵 (업무 병행형)
+
+## 목표
+- 8주 내 CKA 합격(실기). Kubernetes 운영/트러블슈팅 역량 확보.
+
+## 주차별 계획(요약)
+) Core Concepts: Pod/Deployment/Service, kubectl 숙련  
+) Workloads & Scheduling: Label/Selector, Taint/Toleration, Affinity, Job/CronJob, Resource Requests/Limits  
+) Services & Networking: ClusterIP/NodePort/Ingress, DNS, NetworkPolicy  
+) Storage & Config: PV/PVC/StorageClass, ConfigMap/Secret, VolumeMount  
+) Security & RBAC: SA, Role/ClusterRole, RoleBinding, PodSecurityContext  
+) Troubleshooting: CrashLoop, Node NotReady, kubelet, etcd 백업/복원  
+) Mock: Killer.sh 2회, 오답노트, 시간관리  
+) 실전정리: kubectl 단축, dry-run, 공식 Docs 빠른 탐색
+
+## 일일 루틴(예시)
+- 실습 60~90분 → `notes.md` 기록 → `gsave` 푸시  
+- 쉬운 문제 3분 내 해결 습관화, `kubectl explain`/`--dry-run=client -o yaml` 자주 활용
+EOF
+2025-11-04 08:18:22 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:22  cat > 08_resources/cka_checklist.md <<'EOF'
+# CKA 체크리스트
+
+## Cluster / Install / Config
+- [ ] kubeadm init/join/reset
+- [ ] Control-plane 구성요소 개념
+- [ ] CNI 적용(flannel/calico)
+- [ ] etcd 스냅샷 save/restore
+
+## Workloads & Scheduling
+- [ ] Pod/RS/Deployment
+- [ ] Job/CronJob
+- [ ] Label/Selector
+- [ ] Taint/Toleration, Affinity
+- [ ] Requests/Limits, HPA
+
+## Services & Networking
+- [ ] ClusterIP / NodePort / LoadBalancer
+- [ ] Ingress Controller
+- [ ] CoreDNS, kube-proxy
+- [ ] NetworkPolicy (deny-all → 허용)
+
+## Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] emptyDir/hostPath 이해
+- [ ] ConfigMap/Secret=****
+
+## Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+
+## Troubleshooting
+- [ ] logs/describe/debug
+- [ ] CrashLoop 원인 분석
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd 백업/복구 실습
+EOF
+2025-11-04 08:18:22 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:22  cat > 08_resources/cka_checklist.md <<'EOF'
+# CKA 체크리스트
+
+## Cluster / Install / Config
+- [ ] kubeadm init/join/reset
+- [ ] Control-plane 구성요소 개념
+- [ ] CNI 적용(flannel/calico)
+- [ ] etcd 스냅샷 save/restore
+
+## Workloads & Scheduling
+- [ ] Pod/RS/Deployment
+- [ ] Job/CronJob
+- [ ] Label/Selector
+- [ ] Taint/Toleration, Affinity
+- [ ] Requests/Limits, HPA
+
+## Services & Networking
+- [ ] ClusterIP / NodePort / LoadBalancer
+- [ ] Ingress Controller
+- [ ] CoreDNS, kube-proxy
+- [ ] NetworkPolicy (deny-all → 허용)
+
+## Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] emptyDir/hostPath 이해
+- [ ] ConfigMap/Secret=****
+
+## Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+
+## Troubleshooting
+- [ ] logs/describe/debug
+- [ ] CrashLoop 원인 분석
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd 백업/복구 실습
+EOF
+2025-11-04 08:18:24 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:22  cat > 08_resources/cka_checklist.md <<'EOF'
+# CKA 체크리스트
+
+## Cluster / Install / Config
+- [ ] kubeadm init/join/reset
+- [ ] Control-plane 구성요소 개념
+- [ ] CNI 적용(flannel/calico)
+- [ ] etcd 스냅샷 save/restore
+
+## Workloads & Scheduling
+- [ ] Pod/RS/Deployment
+- [ ] Job/CronJob
+- [ ] Label/Selector
+- [ ] Taint/Toleration, Affinity
+- [ ] Requests/Limits, HPA
+
+## Services & Networking
+- [ ] ClusterIP / NodePort / LoadBalancer
+- [ ] Ingress Controller
+- [ ] CoreDNS, kube-proxy
+- [ ] NetworkPolicy (deny-all → 허용)
+
+## Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] emptyDir/hostPath 이해
+- [ ] ConfigMap/Secret=****
+
+## Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+
+## Troubleshooting
+- [ ] logs/describe/debug
+- [ ] CrashLoop 원인 분석
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd 백업/복구 실습
+EOF
+2025-11-04 08:18:25 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:22  cat > 08_resources/cka_checklist.md <<'EOF'
+# CKA 체크리스트
+
+## Cluster / Install / Config
+- [ ] kubeadm init/join/reset
+- [ ] Control-plane 구성요소 개념
+- [ ] CNI 적용(flannel/calico)
+- [ ] etcd 스냅샷 save/restore
+
+## Workloads & Scheduling
+- [ ] Pod/RS/Deployment
+- [ ] Job/CronJob
+- [ ] Label/Selector
+- [ ] Taint/Toleration, Affinity
+- [ ] Requests/Limits, HPA
+
+## Services & Networking
+- [ ] ClusterIP / NodePort / LoadBalancer
+- [ ] Ingress Controller
+- [ ] CoreDNS, kube-proxy
+- [ ] NetworkPolicy (deny-all → 허용)
+
+## Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] emptyDir/hostPath 이해
+- [ ] ConfigMap/Secret=****
+
+## Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+
+## Troubleshooting
+- [ ] logs/describe/debug
+- [ ] CrashLoop 원인 분석
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd 백업/복구 실습
+EOF
+2025-11-04 08:18:33 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:22  cat > 08_resources/cka_checklist.md <<'EOF'
+# CKA 체크리스트
+
+## Cluster / Install / Config
+- [ ] kubeadm init/join/reset
+- [ ] Control-plane 구성요소 개념
+- [ ] CNI 적용(flannel/calico)
+- [ ] etcd 스냅샷 save/restore
+
+## Workloads & Scheduling
+- [ ] Pod/RS/Deployment
+- [ ] Job/CronJob
+- [ ] Label/Selector
+- [ ] Taint/Toleration, Affinity
+- [ ] Requests/Limits, HPA
+
+## Services & Networking
+- [ ] ClusterIP / NodePort / LoadBalancer
+- [ ] Ingress Controller
+- [ ] CoreDNS, kube-proxy
+- [ ] NetworkPolicy (deny-all → 허용)
+
+## Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] emptyDir/hostPath 이해
+- [ ] ConfigMap/Secret=****
+
+## Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+
+## Troubleshooting
+- [ ] logs/describe/debug
+- [ ] CrashLoop 원인 분석
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd 백업/복구 실습
+EOF
+2025-11-04 08:18:34 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:22  cat > 08_resources/cka_checklist.md <<'EOF'
+# CKA 체크리스트
+
+## Cluster / Install / Config
+- [ ] kubeadm init/join/reset
+- [ ] Control-plane 구성요소 개념
+- [ ] CNI 적용(flannel/calico)
+- [ ] etcd 스냅샷 save/restore
+
+## Workloads & Scheduling
+- [ ] Pod/RS/Deployment
+- [ ] Job/CronJob
+- [ ] Label/Selector
+- [ ] Taint/Toleration, Affinity
+- [ ] Requests/Limits, HPA
+
+## Services & Networking
+- [ ] ClusterIP / NodePort / LoadBalancer
+- [ ] Ingress Controller
+- [ ] CoreDNS, kube-proxy
+- [ ] NetworkPolicy (deny-all → 허용)
+
+## Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] emptyDir/hostPath 이해
+- [ ] ConfigMap/Secret=****
+
+## Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+
+## Troubleshooting
+- [ ] logs/describe/debug
+- [ ] CrashLoop 원인 분석
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd 백업/복구 실습
+EOF
+2025-11-04 08:18:34 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:34  cat > 01_core-concepts/notes.md <<'EOF'
+# Week1 - Core Concepts
+- [ ] kubectl 자동완성/alias(k=kubectl)
+- [ ] Namespace 생성: `cka-lab`
+- [ ] Deployment 생성/업데이트/롤백
+- [ ] Service(NodePort) 연결 및 확인
+- [ ] `kubectl explain`, `--dry-run=client -o yaml` 활용
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:34 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:34  cat > 02_networking/notes.md <<'EOF'
+# Week3 - Services & Networking
+- [ ] ClusterIP/NodePort 차이
+- [ ] Ingress Controller 설치/테스트
+- [ ] DNS 확인(CoreDNS)
+- [ ] NetworkPolicy: default-deny + 허용정책
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:34 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:34  cat > 02_networking/notes.md <<'EOF'
+# Week3 - Services & Networking
+- [ ] ClusterIP/NodePort 차이
+- [ ] Ingress Controller 설치/테스트
+- [ ] DNS 확인(CoreDNS)
+- [ ] NetworkPolicy: default-deny + 허용정책
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:39 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:34  cat > 02_networking/notes.md <<'EOF'
+# Week3 - Services & Networking
+- [ ] ClusterIP/NodePort 차이
+- [ ] Ingress Controller 설치/테스트
+- [ ] DNS 확인(CoreDNS)
+- [ ] NetworkPolicy: default-deny + 허용정책
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:40 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:34  cat > 02_networking/notes.md <<'EOF'
+# Week3 - Services & Networking
+- [ ] ClusterIP/NodePort 차이
+- [ ] Ingress Controller 설치/테스트
+- [ ] DNS 확인(CoreDNS)
+- [ ] NetworkPolicy: default-deny + 허용정책
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:40 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:40  cat > 03_storage/notes.md <<'EOF'
+# Week4 - Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] hostPath/emptyDir 용도
+- [ ] ConfigMap/Secret=****
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:40 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:40  cat > 03_storage/notes.md <<'EOF'
+# Week4 - Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] hostPath/emptyDir 용도
+- [ ] ConfigMap/Secret=****
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:45 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:40  cat > 03_storage/notes.md <<'EOF'
+# Week4 - Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] hostPath/emptyDir 용도
+- [ ] ConfigMap/Secret=****
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:45 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:40  cat > 03_storage/notes.md <<'EOF'
+# Week4 - Storage & Config
+- [ ] PV/PVC/StorageClass
+- [ ] hostPath/emptyDir 용도
+- [ ] ConfigMap/Secret=****
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:45 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:45  cat > 04_scheduling/notes.md <<'EOF'
+# Week2 - Workloads & Scheduling
+- [ ] Label/Selector
+- [ ] NodeSelector / Affinity / AntiAffinity
+- [ ] Taint/Toleration
+- [ ] Job/CronJob
+- [ ] Requests/Limits, HPA
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:45 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:45  cat > 04_scheduling/notes.md <<'EOF'
+# Week2 - Workloads & Scheduling
+- [ ] Label/Selector
+- [ ] NodeSelector / Affinity / AntiAffinity
+- [ ] Taint/Toleration
+- [ ] Job/CronJob
+- [ ] Requests/Limits, HPA
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:50 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:45  cat > 04_scheduling/notes.md <<'EOF'
+# Week2 - Workloads & Scheduling
+- [ ] Label/Selector
+- [ ] NodeSelector / Affinity / AntiAffinity
+- [ ] Taint/Toleration
+- [ ] Job/CronJob
+- [ ] Requests/Limits, HPA
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:50 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:45  cat > 04_scheduling/notes.md <<'EOF'
+# Week2 - Workloads & Scheduling
+- [ ] Label/Selector
+- [ ] NodeSelector / Affinity / AntiAffinity
+- [ ] Taint/Toleration
+- [ ] Job/CronJob
+- [ ] Requests/Limits, HPA
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:51 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:51  cat > 05_security/notes.md <<'EOF'
+# Week5 - Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:51 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:51  cat > 05_security/notes.md <<'EOF'
+# Week5 - Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:55 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:51  cat > 05_security/notes.md <<'EOF'
+# Week5 - Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:55 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:51  cat > 05_security/notes.md <<'EOF'
+# Week5 - Security & RBAC
+- [ ] ServiceAccount
+- [ ] Role/ClusterRole, RoleBinding
+- [ ] PodSecurityContext (runAsUser, fsGroup)
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:55 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:55  cat > 06_troubleshooting/notes.md <<'EOF'
+# Week6 - Troubleshooting
+- [ ] CrashLoopBackOff 분석(logs/describe)
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd snapshot save/restore
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:55 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:55  cat > 06_troubleshooting/notes.md <<'EOF'
+# Week6 - Troubleshooting
+- [ ] CrashLoopBackOff 분석(logs/describe)
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd snapshot save/restore
+**Today Log**
+- 
+EOF
+2025-11-04 08:18:59 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:55  cat > 06_troubleshooting/notes.md <<'EOF'
+# Week6 - Troubleshooting
+- [ ] CrashLoopBackOff 분석(logs/describe)
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd snapshot save/restore
+**Today Log**
+- 
+EOF
+2025-11-04 08:19:00 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:18:55  cat > 06_troubleshooting/notes.md <<'EOF'
+# Week6 - Troubleshooting
+- [ ] CrashLoopBackOff 분석(logs/describe)
+- [ ] Node NotReady 복구(kubelet)
+- [ ] etcd snapshot save/restore
+**Today Log**
+- 
+EOF
+2025-11-04 08:19:01 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:19:01  cat > 07_mock-tests/notes.md <<'EOF'
+# Week7~8 - Mock & 실전대비
+- [ ] Killer.sh 모의고사 #1 점수: ___
+- [ ] Killer.sh 모의고사 #2 점수: ___
+- [ ] 시간관리 전략 정리(쉬운 문제 우선)
+- [ ] 실수/오답 패턴 기록
+**Today Log**
+- 
+EOF
+2025-11-04 08:19:01 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:19:01  cat > 07_mock-tests/notes.md <<'EOF'
+# Week7~8 - Mock & 실전대비
+- [ ] Killer.sh 모의고사 #1 점수: ___
+- [ ] Killer.sh 모의고사 #2 점수: ___
+- [ ] 시간관리 전략 정리(쉬운 문제 우선)
+- [ ] 실수/오답 패턴 기록
+**Today Log**
+- 
+EOF
+2025-11-04 08:19:21 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:19:01  cat > 07_mock-tests/notes.md <<'EOF'
+# Week7~8 - Mock & 실전대비
+- [ ] Killer.sh 모의고사 #1 점수: ___
+- [ ] Killer.sh 모의고사 #2 점수: ___
+- [ ] 시간관리 전략 정리(쉬운 문제 우선)
+- [ ] 실수/오답 패턴 기록
+**Today Log**
+- 
+EOF
+2025-11-04 08:19:21 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:19:01  cat > 07_mock-tests/notes.md <<'EOF'
+# Week7~8 - Mock & 실전대비
+- [ ] Killer.sh 모의고사 #1 점수: ___
+- [ ] Killer.sh 모의고사 #2 점수: ___
+- [ ] 시간관리 전략 정리(쉬운 문제 우선)
+- [ ] 실수/오답 패턴 기록
+**Today Log**
+- 
+EOF
+2025-11-04 08:22:46 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:22:28  cat > 00_setup/quick_start.md <<'EOF'
+# Quick Start (하루차 실습용)
+
+## 네임스페이스
+kubectl create ns cka-lab
+kubectl config set-context --current --namespace=cka-lab
+
+[200~
+## Deployment & Service 샘플
+cat > deploy-nginx.yaml <<YAML
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        ports:
+        - containerPort: 80
+YAML
+
+cat > svc-web-nodeport.yaml <<YAML
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-svc
+spec:
+  selector:
+    app: web
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30080
+YAML
+
+kubectl apply -f deploy-nginx.yaml
+kubectl apply -f svc-web-nodeport.yaml
+kubectl get deploy,po,svc -o wide
+EOF
+2025-11-04 08:22:46 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:22:28  cat > 00_setup/quick_start.md <<'EOF'
+# Quick Start (하루차 실습용)
+
+## 네임스페이스
+kubectl create ns cka-lab
+kubectl config set-context --current --namespace=cka-lab
+
+[200~
+## Deployment & Service 샘플
+cat > deploy-nginx.yaml <<YAML
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        ports:
+        - containerPort: 80
+YAML
+
+cat > svc-web-nodeport.yaml <<YAML
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-svc
+spec:
+  selector:
+    app: web
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30080
+YAML
+
+kubectl apply -f deploy-nginx.yaml
+kubectl apply -f svc-web-nodeport.yaml
+kubectl get deploy,po,svc -o wide
+EOF
+2025-11-04 08:23:16 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:23:16  git add .
