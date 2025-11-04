@@ -648,3 +648,433 @@ kubectl apply -f svc-web-nodeport.yaml
 kubectl get deploy,po,svc -o wide
 EOF
 2025-11-04 08:23:16 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:23:16  git add .
+2025-11-04 08:23:16 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:23:16  git commit -m "docs: add CKA roadmap, checklists, week-by-week notes, quick start"
+2025-11-04 08:23:17 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:23:17  git push
+2025-11-04 08:23:19 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:23:17  git push
+2025-11-04 08:32:23 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:32:23  vi README.md 
+2025-11-04 08:33:07 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:32:23  vi README.md 
+2025-11-04 08:33:10 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:10  sudo dnf install -y bash-completion
+2025-11-04 08:33:14 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:14  source /etc/profile.d/bash_completion.sh
+2025-11-04 08:33:14 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:14  source <(kubectl completion bash)
+2025-11-04 08:33:14 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:14  echo 'source <(kubectl completion bash)' >> ~/.bashrc
+2025-11-04 08:33:14 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:14  echo 'source <(kubectl completion bash)' >> ~/.bashrc
+2025-11-04 08:33:16 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:14  echo 'source <(kubectl completion bash)' >> ~/.bashrc
+2025-11-04 08:33:16 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:14  echo 'source <(kubectl completion bash)' >> ~/.bashrc
+2025-11-04 08:33:42 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:14  echo 'source <(kubectl completion bash)' >> ~/.bashrc
+2025-11-04 08:33:42 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:14  echo 'source <(kubectl completion bash)' >> ~/.bashrc
+2025-11-04 08:33:43 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:43  git add README.md && git commit -m "docs: add kubectl tab-completion setup" && git push 
+2025-11-04 08:33:43 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:43  git add README.md && git commit -m "docs: add kubectl tab-completion setup" && git push 
+2025-11-04 08:33:43 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:43  git add README.md && git commit -m "docs: add kubectl tab-completion setup" && git push 
+2025-11-04 08:33:45 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:33:43  git add README.md && git commit -m "docs: add kubectl tab-completion setup" && git push 
+2025-11-04 08:34:36 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:34:36  vi README.md 
+2025-11-04 08:36:10 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:34:36  vi README.md 
+2025-11-04 08:36:13 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:34:36  vi README.md 
+2025-11-04 08:36:14 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:36:14  git add README.md
+2025-11-04 08:36:14 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:36:14  git commit -m "docs: add CKA 2025 updated syllabus section"
+2025-11-04 08:36:14 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:36:14  git push
+2025-11-04 08:36:16 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:36:14  git push
+2025-11-04 08:40:29 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:40:29  vi README.md 
+2025-11-04 08:40:51 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:40:29  vi README.md 
+2025-11-04 08:41:06 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:41:06  ls
+2025-11-04 08:41:06 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:41:06  ls
+2025-11-04 08:41:48 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:41:48  cd 01_core-concepts/
+2025-11-04 08:41:48 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:41:48  cd 01_core-concepts/
+2025-11-04 08:41:48 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:41:48  ls
+2025-11-04 08:41:48 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:41:48  ls
+2025-11-04 08:42:59 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:42:59  cd ~/cka-study/01_core-concepts
+2025-11-04 08:42:59 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:42:59  cd ~/cka-study/01_core-concepts
+2025-11-04 08:43:39 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:43:39  ls
+2025-11-04 08:43:39 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:43:39  ls
+2025-11-04 08:43:50 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:43:39  ls
+2025-11-04 08:43:50 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:43:39  ls
+2025-11-04 08:43:50 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:43:39  ls
+2025-11-04 08:44:08 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:43:51  cat > guide.md <<'EOF'
+# 🧩 1주차 Core Concepts 집중 학습 가이드 (CKA 2025 단기 플랜)
+
+> 목표: 3~4일 내 **Pod → Deployment → Service → Ingress** 완전 숙련  
+> 시험 출제 비중: 약 25% (가장 기본이면서 필수 파트)
+
+---
+
+## 📆 진행 일정 예시
+
+| 일차 | 주제 | 학습 목표 | 실습 파일 |
+|------|------|------------|------------|
+| Day 1 | Pod / ReplicaSet | Pod 구조 및 생성 원리 이해, ReplicaSet 실습 | `pod.yaml`, `rs.yaml` |
+| Day 2 | Deployment | 롤링 업데이트 / 롤백 / 스케일 조정 | `deploy-nginx.yaml` |
+| Day 3 | Service / Ingress | 외부 접근 / 라우팅 실습 | `svc-nodeport.yaml`, `ingress.yaml` |
+| Day 4 | 정리 및 트러블슈팅 | Describe / Logs / Pod 재시작 테스트 | - |
+
+---
+
+## 🧱 Day 1 — Pod / ReplicaSet
+
+### 🎯 학습 포인트
+- Pod 구조 (`apiVersion`, `kind`, `metadata`, `spec`)
+- ReplicaSet이 Pod를 자동 관리하는 방식
+- Label / Selector의 연결 관계
+
+### 🧠 실습 명령
+```bash
+# 네임스페이스 생성
+kubectl create ns cka-lab
+kubectl config set-context --current --namespace=cka-lab
+
+# Pod 생성
+kubectl run nginx --image=nginx
+kubectl get pods -o wide
+kubectl describe pod nginx
+
+# YAML 기반 생성
+kubectl run nginx2 --image=nginx --dry-run=client -o yaml > pod.yaml
+kubectl apply -f pod.yaml
+
+# ReplicaSet
+cat > rs-nginx.yaml <<YAML
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+YAML
+
+kubectl apply -f rs-nginx.yaml
+kubectl get rs,pods -o wide
+exit
+quit
+;
+2025-11-04 08:44:21 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:44:21  vi guide.md
+2025-11-04 08:50:08 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:44:21  vi guide.md
+2025-11-04 08:50:15 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:50:14  git add guide.md
+2025-11-04 08:50:15 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:50:15  git commit -m "docs: add week1 core concepts short-term learning guide"
+2025-11-04 08:50:15 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:50:15  git push
+2025-11-04 08:50:17 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:50:15  git push
+2025-11-04 08:54:02 [2230102] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 08:54:02  cd ..
+2025-11-04 08:54:02 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:54:02  cd ..
+2025-11-04 08:54:10 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:54:10  git add README.md 
+2025-11-04 08:54:10 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:54:10  git add README.md 
+2025-11-04 08:54:29 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:54:29  git commit -m "docs: edit README"
+2025-11-04 08:54:29 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:54:29  git commit -m "docs: edit README"
+2025-11-04 08:54:31 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:54:31  git push
+2025-11-04 08:54:33 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:54:31  git push
+2025-11-04 08:57:19 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:19  cat > 01_core-concepts/guide.md <<'EOF'
+# 🧩 Core Concepts Guide
+> Kubernetes의 가장 기본이자 핵심 구성요소 이해 (Pod → Deployment → Service → Ingress)
+
+### 학습 목표
+- Pod / ReplicaSet / Deployment / Service 구조 완전 이해
+- kubectl 주요 명령 숙련 (`get`, `describe`, `logs`, `apply`)
+- 실제 YAML 작성 및 롤링 업데이트·롤백 실습
+
+### 주요 개념
+- Pod: 컨테이너 실행의 최소 단위
+- ReplicaSet: Pod의 개수를 보장
+- Deployment: ReplicaSet의 버전 관리
+- Service: Pod에 접근하는 네트워크 엔드포인트
+- Ingress: HTTP 라우팅과 도메인 기반 접근
+
+### 시험 포인트
+- Pod YAML 직접 작성 (`--dry-run=client -o yaml`)
+- Deployment 롤링 업데이트 / 롤백
+- NodePort / ClusterIP / Ingress 구분 및 설정
+EOF
+2025-11-04 08:57:19 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:19  cat > 02_networking/guide.md <<'EOF'
+# 🌐 Networking Guide
+> Service, Ingress, Gateway API, NetworkPolicy 중심의 네트워킹 구성 실습
+
+### 학습 목표
+- Pod 간 통신 구조 이해
+- Service 타입 (ClusterIP / NodePort / LoadBalancer) 구성
+- Ingress Controller와 Gateway API 실습
+- NetworkPolicy를 통한 접근제어
+
+### 주요 개념
+- kube-proxy: 서비스 트래픽 라우팅 담당
+- CoreDNS: 클러스터 내부 DNS 해석
+- Ingress: Layer7 트래픽 라우팅
+- NetworkPolicy: Pod 간 통신 제어
+
+### 시험 포인트
+- NodePort와 ClusterIP 구분
+- Ingress YAML 직접 작성
+- default-deny + 허용 정책 구현
+EOF
+2025-11-04 08:57:19 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:19  cat > 03_storage/guide.md <<'EOF'
+# 💾 Storage Guide
+> PV/PVC, ConfigMap, Secret, CSI Plugin 구성 및 관리
+
+### 학습 목표
+- PersistentVolume / PersistentVolumeClaim 이해
+- 동적 프로비저닝 실습
+- ConfigMap / Secret=**** 및 Pod에 주입
+- CSI 기반 스토리지 연결
+
+### 주요 개념
+- PV/PVC: 영구 볼륨 관리
+- StorageClass: 동적 스토리지 프로비저닝
+- ConfigMap / Secret=**** 및 민감정보 관리
+- AccessModes: RWO, RWX 등 접근 방식
+
+### 시험 포인트
+- PVC → Pod 매핑 확인
+- Secret을 env와 volume으로 마운트
+- StorageClass 자동 생성 확인
+EOF
+2025-11-04 08:57:19 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:19  cat > 04_scheduling/guide.md <<'EOF'
+# ⚙️ Workloads & Scheduling Guide
+> Job, CronJob, Node Affinity, Taints/Tolerations 실습
+
+### 학습 목표
+- Job/CronJob을 이용한 배치 작업 생성
+- NodeSelector / Affinity / Toleration 이해
+- 리소스 요청/제한 설정 (Requests / Limits)
+
+### 주요 개념
+- Taint/Toleration: 특정 노드 회피/허용
+- Affinity/AntiAffinity: 배치 전략
+- HPA: 부하 기반 자동 스케일링
+- Job/CronJob: 일회성·주기적 작업 관리
+
+### 시험 포인트
+- Job 완료 조건 (`completions`, `backoffLimit`)
+- CronJob 주기(`*/5 * * * *`) 설정
+- Taint 노드에 파드 스케줄링 제한
+EOF
+2025-11-04 08:57:19 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:19  cat > 05_security/guide.md <<'EOF'
+# 🔐 Security & RBAC Guide
+> Kubernetes 접근 제어와 권한 설정 중심 실습
+
+### 학습 목표
+- Role / RoleBinding / ClusterRole 이해
+- ServiceAccount를 이용한 인증
+- PodSecurityContext 적용 (runAsUser, fsGroup)
+- 이미지 풀 시크릿 및 PSP 대체 정책
+
+### 주요 개념
+- RBAC: Role-Based Access Control
+- SA(ServiceAccount): Pod가 API 서버에 접근 시 사용
+- PodSecurityContext: 런타임 보안 설정
+- PSP(PodSecurityPolicy) 대체 정책: PodSecurity Standard
+
+### 시험 포인트
+- RoleBinding을 특정 SA에 연결
+- runAsUser/fsGroup 적용 확인
+- API 접근 권한 제한/허용 테스트
+EOF
+2025-11-04 08:57:20 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:19  cat > 06_troubleshooting/guide.md <<'EOF'
+# 🧰 Troubleshooting Guide
+> 문제 발생 시 빠르게 원인 파악 및 복원하는 능력
+
+### 학습 목표
+- Pod CrashLoopBackOff 원인 분석
+- Node NotReady / kubelet 중단 복구
+- etcd 백업/복원
+- 네트워크 및 스토리지 문제 점검
+
+### 주요 개념
+- logs / describe / events 분석
+- systemctl / journalctl을 이용한 kubelet 점검
+- etcdctl snapshot save / restore 명령
+
+### 시험 포인트
+- CrashLoopBackOff Pod 분석 및 수정
+- Node NotReady 복구 (kubelet 재시작)
+- etcd 스냅샷 백업/복원 성공
+EOF
+2025-11-04 08:57:20 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:20  cat > 07_mock-tests/guide.md <<'EOF'
+# 🧪 Mock Test Guide
+> 실전 대비 모의시험 연습용 (killer.sh / KodeKloud 기반)
+
+### 학습 목표
+- 시간 관리 (2시간 내 19문항 해결)
+- 공식 문서 탐색 속도 향상
+- 복잡한 시나리오 해결 훈련
+
+### 주요 개념
+- 문제 읽기 → 요구 리소스 파악 → 명령으로 해결
+- Docs 탐색 (`kubectl explain`, `kubernetes.io/docs/tasks`)
+- 복원 명령 (`kubectl rollout undo`, `etcdctl restore`)
+
+### 시험 포인트
+- 실전 환경 동일하게 구성 후 제한시간 내 수행
+- 가장 약한 도메인 2개를 집중 보완
+EOF
+2025-11-04 08:57:30 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:20  cat > 08_resources/guide.md <<'EOF'
+# 📚 Reference & Resources Guide
+> CKA 준비를 위한 공식 문서, 튜토리얼, 툴 모음
+
+### 공식 문서
+- [Kubernetes Docs](https://kubernetes.io/docs/)
+- [CNCF CKA Exam Curriculum (2025)](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
+- [Helm](https://helm.sh/docs/)
+- [Gateway API](https://gateway-api.sigs.k8s.io/)
+
+### 실습 도구
+- [killer.sh (CKA Mock)](https://killer.sh/)
+- [KodeKloud CKA Labs](https://kodekloud.com/)
+- [Katacoda Labs (무료 실습)](https://www.katacoda.com/)
+- [CKA Exercises by Michael Solomon](https://github.com/mmumshad/kubernetes-the-hard-way-labs)
+
+
+### 유용한 명령
+```bash
+kubectl explain pod.spec.containers
+kubectl get all -A
+kubectl get events --sort-by=.metadata.creationTimestamp | tail
+EOF
+2025-11-04 08:57:30 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:20  cat > 08_resources/guide.md <<'EOF'
+# 📚 Reference & Resources Guide
+> CKA 준비를 위한 공식 문서, 튜토리얼, 툴 모음
+
+### 공식 문서
+- [Kubernetes Docs](https://kubernetes.io/docs/)
+- [CNCF CKA Exam Curriculum (2025)](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
+- [Helm](https://helm.sh/docs/)
+- [Gateway API](https://gateway-api.sigs.k8s.io/)
+
+### 실습 도구
+- [killer.sh (CKA Mock)](https://killer.sh/)
+- [KodeKloud CKA Labs](https://kodekloud.com/)
+- [Katacoda Labs (무료 실습)](https://www.katacoda.com/)
+- [CKA Exercises by Michael Solomon](https://github.com/mmumshad/kubernetes-the-hard-way-labs)
+
+
+### 유용한 명령
+```bash
+kubectl explain pod.spec.containers
+kubectl get all -A
+kubectl get events --sort-by=.metadata.creationTimestamp | tail
+EOF
+2025-11-04 08:57:36 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:36  git add 0*/guide.md
+2025-11-04 08:57:36 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:36  git commit -m "docs: add subject-wise guide.md templates for all CKA topics"
+2025-11-04 08:57:36 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:36  git push
+2025-11-04 08:57:39 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:57:36  git push
+2025-11-04 08:59:15 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:59:15  vi README.md
+2025-11-04 09:00:42 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 08:59:15  vi README.md
+2025-11-04 09:01:03 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:01:03  git add README.md 
+2025-11-04 09:01:03 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:01:03  git add README.md 
+2025-11-04 09:01:13 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:01:13  git commit -m "docs: README.md update"
+2025-11-04 09:01:13 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:01:13  git commit -m "docs: README.md update"
+2025-11-04 09:01:16 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:01:16  git push
+2025-11-04 09:01:18 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:01:16  git push
+2025-11-04 09:09:17 [2247832] onycom@master:/home/onycom -> 
+2025-11-04 09:09:17 [2247832] onycom@master:/home/onycom -> 
+2025-11-04 09:09:17 [2247832] onycom@master:/home/onycom -> 
+2025-11-04 09:09:19 [2247933] onycom@master:/home/onycom -> 
+2025-11-04 09:09:19 [2247933] onycom@master:/home/onycom -> 
+2025-11-04 09:09:19 [2247933] onycom@master:/home/onycom -> 2025-11-04 09:01:16  git push
+2025-11-04 09:10:20 [2248285] onycom@master:/home/onycom -> 
+2025-11-04 09:10:20 [2248285] onycom@master:/home/onycom -> 
+2025-11-04 09:10:20 [2248285] onycom@master:/home/onycom -> 
+2025-11-04 09:10:33 [2230102] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:10:33  exit
+2025-11-04 09:11:04 [2247933] onycom@master:/home/onycom -> 2025-11-04 09:11:04  cd cka-study/01_core-concepts/
+2025-11-04 09:11:05 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:11:04  cd cka-study/01_core-concepts/
+2025-11-04 09:11:05 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:11:05  ls
+2025-11-04 09:11:05 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:11:05  ls
+2025-11-04 09:11:49 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:11:49  vi architecture.md
+2025-11-04 09:13:01 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:11:49  vi architecture.md
+2025-11-04 09:13:05 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:13:05  git add architecture.md
+2025-11-04 09:13:05 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:13:05  git commit -m "docs(core-concepts): add architecture summary using screenshot 2025-11-04"
+2025-11-04 09:13:05 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:13:05  git push
+2025-11-04 09:13:08 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:13:05  git push
+2025-11-04 09:13:48 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:13:48  git add screenshot\ 2025-11-04\ 090634.png
+2025-11-04 09:13:48 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:13:48  git add screenshot\ 2025-11-04\ 090634.png
+2025-11-04 09:14:07 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:14:07  git commit -m "docs:guide.md image"
+2025-11-04 09:14:07 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:14:07  git commit -m "docs:guide.md image"
+2025-11-04 09:14:09 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:14:09  git push
+2025-11-04 09:14:12 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:14:09  git push
+2025-11-04 09:14:28 [2247933] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:14:28  vi architecture.md
+2025-11-04 09:15:34 [2249961] onycom@master:/home/onycom -> 
+2025-11-04 09:15:34 [2249961] onycom@master:/home/onycom -> 
+2025-11-04 09:15:34 [2249961] onycom@master:/home/onycom -> 2025-11-04 09:14:28  vi architecture.md
+2025-11-04 09:15:34 [2250031] onycom@master:/home/onycom -> 
+2025-11-04 09:15:34 [2250031] onycom@master:/home/onycom -> 
+2025-11-04 09:15:34 [2250031] onycom@master:/home/onycom -> 
+2025-11-04 09:15:37 [2249961] onycom@master:/home/onycom -> 2025-11-04 09:15:37  cd cka-study/
+2025-11-04 09:15:37 [2249961] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:15:37  cd cka-study/
+2025-11-04 09:15:37 [2249961] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:15:37  ls
+2025-11-04 09:15:37 [2249961] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:15:37  ls
+2025-11-04 09:15:39 [2249961] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:15:39  cd 01
+2025-11-04 09:15:39 [2249961] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:15:39  cd 01
+2025-11-04 09:15:40 [2249961] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:15:40  cd 01_core-concepts/
+2025-11-04 09:15:40 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:15:40  cd 01_core-concepts/
+2025-11-04 09:15:41 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:15:41  ls
+2025-11-04 09:15:41 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:15:41  ls
+2025-11-04 09:15:45 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:15:45  vi architecture.md 
+2025-11-04 09:16:15 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:15:45  vi architecture.md 
+2025-11-04 09:16:22 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:16:22  git add architecture.md
+2025-11-04 09:16:22 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:16:22  git add architecture.md
+2025-11-04 09:16:37 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:16:37  git commit -m "docs:guide.md 출처"
+2025-11-04 09:16:37 [2249961] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:16:37  git commit -m "docs:guide.md 출처"
+2025-11-04 09:17:00 [2250758] onycom@master:/home/onycom -> 
+2025-11-04 09:17:00 [2250758] onycom@master:/home/onycom -> 
+2025-11-04 09:17:00 [2250758] onycom@master:/home/onycom -> 2025-11-04 09:16:37  git commit -m "docs:guide.md 출처"
+2025-11-04 09:17:03 [2250758] onycom@master:/home/onycom -> 2025-11-04 09:17:03  cd cka-study/
+2025-11-04 09:17:03 [2250758] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:17:03  cd cka-study/
+2025-11-04 09:17:06 [2250758] onycom@master:/home/onycom/cka-study -> 2025-11-04 09:17:06  cd 01_core-concepts/
+2025-11-04 09:17:06 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:17:06  cd 01_core-concepts/
+2025-11-04 09:17:08 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:17:08  git push
+2025-11-04 09:17:10 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:17:08  git push
+2025-11-04 09:18:06 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:06  kubectl get componentstatuses
+2025-11-04 09:18:06 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:06  kubectl get componentstatuses
+2025-11-04 09:18:07 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:06  kubectl get componentstatuses
+2025-11-04 09:18:08 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:06  kubectl get componentstatuses
+2025-11-04 09:18:20 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:20  kubectl get nodes -o wide
+2025-11-04 09:18:20 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:20  kubectl get nodes -o wide
+2025-11-04 09:18:22 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:20  kubectl get nodes -o wide
+2025-11-04 09:18:22 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:20  kubectl get nodes -o wide
+2025-11-04 09:18:22 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:20  kubectl get nodes -o wide
+2025-11-04 09:18:27 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:27  kubectl get all -A
+2025-11-04 09:18:27 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:27  kubectl get all -A
+2025-11-04 09:18:33 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:27  kubectl get all -A
+2025-11-04 09:18:33 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:27  kubectl get all -A
+2025-11-04 09:18:33 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:18:27  kubectl get all -A
+2025-11-04 09:19:03 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:19:03  kubectl describe pod worker1
+2025-11-04 09:19:03 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:19:03  kubectl describe pod worker1
+2025-11-04 09:19:19 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:19:19  kubectl get nodes -o wide
+2025-11-04 09:19:19 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:19:19  kubectl get nodes -o wide
+2025-11-04 09:20:02 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:20:02  kubectl describe pod webserver
+2025-11-04 09:20:02 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:20:02  kubectl describe pod webserver
+2025-11-04 09:32:12 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:20:02  kubectl describe pod webserver
+2025-11-04 09:32:12 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:20:02  kubectl describe pod webserver
+2025-11-04 09:32:27 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:32:27  kubectl get all -A
+2025-11-04 09:32:28 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:32:27  kubectl get all -A
+2025-11-04 09:32:43 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:32:43  kubectl describe pod nginx
+2025-11-04 09:32:43 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:32:43  kubectl describe pod nginx
+2025-11-04 09:33:11 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:33:11  kubectl describe pod etcd-master
+2025-11-04 09:33:11 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:33:11  kubectl describe pod etcd-master
+2025-11-04 09:33:42 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:33:42  kubectl logs -f nginx
+2025-11-04 09:33:42 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:33:42  kubectl logs -f nginx
+2025-11-04 09:33:45 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:33:45  kubectl logs -f webserver
+2025-11-04 09:35:16 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:33:45  kubectl logs -f webserver
+2025-11-04 09:35:17 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:33:45  kubectl logs -f webserver
+2025-11-04 09:35:17 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:33:45  kubectl logs -f webserver
+2025-11-04 09:35:41 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:35:41  kubectl run nginx --image=nginx
+2025-11-04 09:35:41 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:35:41  kubectl run nginx --image=nginx
+2025-11-04 09:35:48 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:35:48  kubectl get pods
+2025-11-04 09:35:48 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:35:48  kubectl get pods
+2025-11-04 09:35:53 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:35:48  kubectl get pods
+2025-11-04 09:35:53 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:35:48  kubectl get pods
+2025-11-04 09:35:55 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:35:48  kubectl get pods
+2025-11-04 09:36:01 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:01  kubectl logs -f nginx
+2025-11-04 09:36:05 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:01  kubectl logs -f nginx
+2025-11-04 09:36:06 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:06  kubectl get pods
+2025-11-04 09:36:06 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:06  kubectl get pods
+2025-11-04 09:36:07 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:06  kubectl get pods
+2025-11-04 09:36:07 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:06  kubectl get pods
+2025-11-04 09:36:07 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:06  kubectl get pods
+2025-11-04 09:37:11 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:06  kubectl get pods
+2025-11-04 09:37:11 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:36:06  kubectl get pods
+2025-11-04 09:37:12 [2250758] onycom@master:/home/onycom/cka-study/01_core-concepts -> 2025-11-04 09:37:12  exit
