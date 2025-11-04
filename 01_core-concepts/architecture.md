@@ -3,6 +3,8 @@
 
 ![Cluster Architecture](screenshot%202025-11-04%20090634.png)
 
+출처: https://www.youtube.com/watch?v=pfkx8KDAZyk&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&t=489s
+
 > 이 다이어그램은 Master(Control Plane)와 Node(Worker)의 구성 요소,  
 > 그리고 `kubectl create deploy ui --image=nginx --namespace=blue` 명령이  
 > 실제로 클러스터 내에서 어떤 흐름으로 동작하는지를 보여줍니다.
