@@ -12,6 +12,42 @@
 | 2주차 | Storage + Security | PV / PVC / ConfigMap / Secret / ServiceAccount / RoleBinding / PodSecurityContext | 11/11~11/17 | ☐ 예정 |
 | 3주차 | Troubleshooting + Mock | kubelet / etcd / logs / CrashLoopBackOff / Killer.sh 모의고사 / Docs 탐색 연습 | 11/18~11/24 | ☐ 예정 |
 
+---
+
+## 🧭 Guide 활용 안내
+
+각 주제별 폴더(`01_core-concepts` ~ `08_resources`)에는 `guide.md` 파일이 포함되어 있습니다.  
+이 파일들은 CKA 학습의 기준이 되는 실습 가이드입니다.
+
+📂 **어느 채팅에서든**
+> “`05_security/guide.md` 기준으로 ServiceAccount 실습 알려줘.”  
+
+처럼 요청하면, ChatGPT가 해당 가이드를 기준으로  
+**실습 명령 / 설명 / 확인 절차 / 트러블슈팅 루틴**을 이어서 안내합니다.
+
+---
+
+## ⚡️ 실습 루틴 자동 구성 안내
+
+현재 학습 구조는 **짧은 주차 + 하루 단위 루틴**으로 구성되어 있습니다.  
+각 주제는 `guide.md`를 기준으로 Day1~Day4 단위로 나누어 학습할 수 있습니다.
+
+| Day | 주제 | 학습 내용 | 비중 |
+|-----|------|------------|------|
+| Day 1 | Pod / ReplicaSet | Pod 구조 이해, ReplicaSet 자동 관리 | 25% |
+| Day 2 | Deployment | 스케일 / 롤링 업데이트 / 롤백 | 25% |
+| Day 3 | Service / Ingress | 내부·외부 라우팅, 접근 테스트 | 25% |
+| Day 4 | 트러블슈팅 / 복습 | logs / describe / rollout undo 복습 | 25% |
+
+**학습 흐름 예시**
+1. `01_core-concepts/guide.md`를 기준으로 Day1~Day4 순서대로 진행  
+2. 하루 학습이 끝날 때마다 `notes.md`에 학습 내용 요약  
+3. `gsave`로 커밋 & 푸시 (`auto: YYYYMMDD_HHMM`)  
+4. 다음 날 ChatGPT에  
+   > “오늘은 `Day 2 (Deployment)` 학습할게. 관련 실습 명령 정리해줘.”  
+   라고 입력하면 자동으로 맞춤형 가이드 생성  
+
+
 ## 📆 진행 현황
 | 주차 | 주제 | 상태 |
 |---|---|---|
