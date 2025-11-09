@@ -1,0 +1,103 @@
+2025-11-09 00:38:17 [3900752] onycom@master:/home/onycom -> 
+2025-11-09 00:38:17 [3900752] onycom@master:/home/onycom -> 
+2025-11-09 00:38:17 [3900743] onycom@master:/home/onycom -> 
+2025-11-09 00:38:17 [3900752] onycom@master:/home/onycom -> 
+2025-11-09 00:38:17 [3900743] onycom@master:/home/onycom -> 
+2025-11-09 00:38:18 [3900743] onycom@master:/home/onycom -> 2025-11-08 12:02:48  kubectl -n iiac-viz port-forward svc/iiac-viz-svc 18080:80
+2025-11-09 00:38:35 [3900743] onycom@master:/home/onycom -> 2025-11-09 00:38:35  history
+2025-11-09 00:38:35 [3900743] onycom@master:/home/onycom -> 2025-11-09 00:38:35  history
+2025-11-09 00:40:34 [3900743] onycom@master:/home/onycom -> 2025-11-09 00:38:35  history
+2025-11-09 00:40:35 [3900743] onycom@master:/home/onycom -> 2025-11-09 00:38:35  history
+2025-11-09 00:40:35 [3900743] onycom@master:/home/onycom -> 2025-11-09 00:38:35  history
+2025-11-09 00:54:35 [3905005] onycom@master:/home/onycom -> 
+2025-11-09 00:54:35 [3905005] onycom@master:/home/onycom -> 
+2025-11-09 00:54:35 [3904996] onycom@master:/home/onycom -> 
+2025-11-09 00:54:35 [3904996] onycom@master:/home/onycom -> 
+2025-11-09 00:54:35 [3905005] onycom@master:/home/onycom -> 
+2025-11-09 00:54:35 [3904996] onycom@master:/home/onycom -> 2025-11-09 00:38:35  history
+2025-11-09 00:54:41 [3904996] onycom@master:/home/onycom -> 2025-11-09 00:54:41  kubectl get -o wide
+2025-11-09 00:54:41 [3904996] onycom@master:/home/onycom -> 2025-11-09 00:54:41  kubectl get -o wide
+2025-11-09 00:54:47 [3904996] onycom@master:/home/onycom -> 2025-11-09 00:54:47  kubectl get node -o wide
+2025-11-09 00:54:47 [3904996] onycom@master:/home/onycom -> 2025-11-09 00:54:47  kubectl get node -o wide
+2025-11-09 01:11:39 [3909488] onycom@master:/home/onycom -> 
+2025-11-09 01:11:39 [3909479] onycom@master:/home/onycom -> 
+2025-11-09 01:11:39 [3909488] onycom@master:/home/onycom -> 
+2025-11-09 01:11:39 [3909479] onycom@master:/home/onycom -> 
+2025-11-09 01:11:39 [3909488] onycom@master:/home/onycom -> 
+2025-11-09 01:11:39 [3909479] onycom@master:/home/onycom -> 2025-11-09 00:54:47  kubectl get node -o wide
+2025-11-09 01:11:41 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:11:41  kubectl -n iiac-viz get pods -w
+2025-11-09 01:11:44 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:11:41  kubectl -n iiac-viz get pods -w
+2025-11-09 01:11:47 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:11:41  kubectl -n iiac-viz get pods -w
+2025-11-09 01:12:00 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:11:41  kubectl -n iiac-viz get pods -w
+2025-11-09 01:12:08 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:08  kubectl -n iiac-viz get pods
+2025-11-09 01:12:08 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:08  kubectl -n iiac-viz get pods
+2025-11-09 01:12:09 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:08  kubectl -n iiac-viz get pods
+2025-11-09 01:12:09 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:08  kubectl -n iiac-viz get pods
+2025-11-09 01:12:11 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:11  kubectl -n iiac-viz get pods -w
+2025-11-09 01:12:19 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:11  kubectl -n iiac-viz get pods -w
+2025-11-09 01:12:24 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:24  kubectl -n iiac-viz get pods
+2025-11-09 01:12:24 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:24  kubectl -n iiac-viz get pods
+2025-11-09 01:12:26 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:24  kubectl -n iiac-viz get pods
+2025-11-09 01:12:26 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:24  kubectl -n iiac-viz get pods
+2025-11-09 01:12:26 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:24  kubectl -n iiac-viz get pods
+2025-11-09 01:12:27 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:12:24  kubectl -n iiac-viz get pods
+2025-11-09 01:13:01 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:13:01  echo POD
+2025-11-09 01:13:01 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:13:01  echo POD
+2025-11-09 01:13:24 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:13:24  echo "$POD"
+2025-11-09 01:13:24 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:13:24  echo "$POD"
+2025-11-09 01:16:22 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:13:24  echo "$POD"
+2025-11-09 01:16:23 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:16:23  kubectl -n iiac-viz get po -l app=iiac-viz -o name
+2025-11-09 01:16:23 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:16:23  kubectl -n iiac-viz get po -l app=iiac-viz -o name
+2025-11-09 01:16:24 [3909479] onycom@master:/home/onycom -> 2025-11-09 01:16:23  kubectl -n iiac-viz get po -l app=iiac-viz -o name
+2025-11-09 01:24:14 [3913238] onycom@master:/home/onycom -> 
+2025-11-09 01:24:14 [3913238] onycom@master:/home/onycom -> 
+2025-11-09 01:24:14 [3913229] onycom@master:/home/onycom -> 
+2025-11-09 01:24:14 [3913229] onycom@master:/home/onycom -> 
+2025-11-09 01:24:14 [3913238] onycom@master:/home/onycom -> 
+2025-11-09 01:24:14 [3913229] onycom@master:/home/onycom -> 2025-11-09 01:16:23  kubectl -n iiac-viz get po -l app=iiac-viz -o name
+2025-11-09 01:24:15 [3913229] onycom@master:/home/onycom -> 2025-11-09 01:16:23  kubectl -n iiac-viz get po -l app=iiac-viz -o name
+2025-11-09 01:24:15 [3913229] onycom@master:/home/onycom -> 2025-11-09 01:16:23  kubectl -n iiac-viz get po -l app=iiac-viz -o name
+2025-11-09 01:24:16 [3913229] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:24:16 [3913229] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:24:17 [3913229] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:40:40 [3917533] onycom@master:/home/onycom -> 
+2025-11-09 01:40:40 [3917533] onycom@master:/home/onycom -> 
+2025-11-09 01:40:40 [3917524] onycom@master:/home/onycom -> 
+2025-11-09 01:40:40 [3917524] onycom@master:/home/onycom -> 
+2025-11-09 01:40:40 [3917533] onycom@master:/home/onycom -> 
+2025-11-09 01:40:40 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:40:41 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:40:41 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:40:41 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:40:41 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:40:41 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:24:16  kubectl -n iiac-viz get all
+2025-11-09 01:40:56 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:40:56  kubectl -n iiac-viz describe deploy/iiac-viz | egrep -i "NewReplicaSet|OldReplicaSets|Image|Revision"
+2025-11-09 01:40:56 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:40:56  kubectl -n iiac-viz describe deploy/iiac-viz | egrep -i "NewReplicaSet|OldReplicaSets|Image|Revision"
+2025-11-09 01:40:56 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:40:56  kubectl -n iiac-viz describe deploy/iiac-viz | egrep -i "NewReplicaSet|OldReplicaSets|Image|Revision"
+2025-11-09 01:40:57 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:40:56  kubectl -n iiac-viz describe deploy/iiac-viz | egrep -i "NewReplicaSet|OldReplicaSets|Image|Revision"
+2025-11-09 01:40:57 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:40:56  kubectl -n iiac-viz describe deploy/iiac-viz | egrep -i "NewReplicaSet|OldReplicaSets|Image|Revision"
+2025-11-09 01:40:57 [3917524] onycom@master:/home/onycom -> 2025-11-09 01:40:56  kubectl -n iiac-viz describe deploy/iiac-viz | egrep -i "NewReplicaSet|OldReplicaSets|Image|Revision"
+2025-11-09 01:46:13 [3919305] onycom@master:/home/onycom -> 
+2025-11-09 01:46:13 [3919305] onycom@master:/home/onycom -> 
+2025-11-09 01:46:13 [3919296] onycom@master:/home/onycom -> 
+2025-11-09 01:46:13 [3919296] onycom@master:/home/onycom -> 
+2025-11-09 01:46:13 [3919305] onycom@master:/home/onycom -> 
+2025-11-09 01:46:13 [3919296] onycom@master:/home/onycom -> 2025-11-09 01:40:56  kubectl -n iiac-viz describe deploy/iiac-viz | egrep -i "NewReplicaSet|OldReplicaSets|Image|Revision"
+2025-11-09 01:46:13 [3919296] onycom@master:/home/onycom -> 2025-11-09 01:46:13  ls
+2025-11-09 01:46:13 [3919296] onycom@master:/home/onycom -> 2025-11-09 01:46:13  ls
+2025-11-09 01:46:37 [3919296] onycom@master:/home/onycom -> 2025-11-09 01:46:37  cd cka-study/
+2025-11-09 01:46:37 [3919296] onycom@master:/home/onycom/cka-study -> 2025-11-09 01:46:37  cd cka-study/
+2025-11-09 01:46:37 [3919296] onycom@master:/home/onycom/cka-study -> 2025-11-09 01:46:37  ls
+2025-11-09 01:46:37 [3919296] onycom@master:/home/onycom/cka-study -> 2025-11-09 01:46:37  ls
+2025-11-09 01:47:04 [3919296] onycom@master:/home/onycom/cka-study -> 2025-11-09 01:47:04  mkdir 09_scenario
+2025-11-09 01:47:04 [3919296] onycom@master:/home/onycom/cka-study -> 2025-11-09 01:47:04  mkdir 09_scenario
+2025-11-09 01:47:32 [3919296] onycom@master:/home/onycom/cka-study -> 2025-11-09 01:47:32  mkdir 09_scenario/001-tomcat-deploy
+2025-11-09 01:47:32 [3919296] onycom@master:/home/onycom/cka-study -> 2025-11-09 01:47:32  mkdir 09_scenario/001-tomcat-deploy
+2025-11-09 01:47:38 [3919296] onycom@master:/home/onycom/cka-study -> 2025-11-09 01:47:38  cd 09_scenario/001-tomcat-deploy/
+2025-11-09 01:47:38 [3919296] onycom@master:/home/onycom/cka-study/09_scenario/001-tomcat-deploy -> 2025-11-09 01:47:38  cd 09_scenario/001-tomcat-deploy/
+2025-11-09 01:47:50 [3919296] onycom@master:/home/onycom/cka-study/09_scenario/001-tomcat-deploy -> 2025-11-09 01:47:50  vi README.md
+2025-11-09 01:48:18 [3919296] onycom@master:/home/onycom/cka-study/09_scenario/001-tomcat-deploy -> 2025-11-09 01:47:50  vi README.md
+2025-11-09 01:48:31 [3919296] onycom@master:/home/onycom/cka-study/09_scenario/001-tomcat-deploy -> 2025-11-09 01:48:31  vi iiac-viz-tomcat.yaml
+2025-11-09 01:48:50 [3919296] onycom@master:/home/onycom/cka-study/09_scenario/001-tomcat-deploy -> 2025-11-09 01:48:31  vi iiac-viz-tomcat.yaml
+2025-11-09 01:48:54 [3919296] onycom@master:/home/onycom/cka-study/09_scenario/001-tomcat-deploy -> 2025-11-09 01:48:54  vi README.md 
+2025-11-09 01:49:23 [3919296] onycom@master:/home/onycom/cka-study/09_scenario/001-tomcat-deploy -> 2025-11-09 01:48:54  vi README.md 

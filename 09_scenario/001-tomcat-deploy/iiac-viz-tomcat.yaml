@@ -1,0 +1,42 @@
+
+kubectl create ns iiac-viz
+cat <<'EOF' > iiac-viz-tomcat.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iiac-viz
+  namespace: iiac-viz
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: iiac-viz
+  template:
+    metadata:
+      labels:
+        app: iiac-viz
+    spec:
+      containers:
+        - name: tomcat
+          image: tomcat:10.1.48-jdk17
+          ports:
+            - containerPort: 8080
+          env:
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Dspring.profiles.active=prod"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: iiac-viz-svc
+  namespace: iiac-viz
+spec:
+  type: NodePort
+  selector:
+    app: iiac-viz
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      nodePort: 30080
