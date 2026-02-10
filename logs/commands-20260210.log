@@ -1,0 +1,230 @@
+2026-02-10 11:51:25 [714181] onycom@master:/home/onycom -> 
+2026-02-10 11:51:25 [714181] onycom@master:/home/onycom -> 
+2026-02-10 11:51:25 [714181] onycom@master:/home/onycom -> 2025-11-10 18:08:04  kubectl -n iiac-viz get all
+2026-02-10 11:51:29 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:29  HOST=$(hostname)
+2026-02-10 11:51:29 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:29  OS=$(cat /etc/redhat-release 2>/dev/null)
+2026-02-10 11:51:29 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:29  KERNEL=$(uname -r)
+2026-02-10 11:51:29 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:29  CPU_MODEL=$(lscpu | awk -F: '/Model name/ {print $2}' | xargs)
+2026-02-10 11:51:29 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:29  CPU_CORES=$(lscpu | awk -F: '/^CPU\(s\)/ {print $2}' | xargs)
+2026-02-10 11:51:29 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:29  MEM_TOTAL=$(free -h | awk '/Mem:/ {print $2}')
+2026-02-10 11:51:29 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:29  MEM_MAX=$(sudo dmidecode -t memory | awk -F: '/Maximum Capacity/ {print $2; exit}' | xargs)
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  MEM_TYPE=$(sudo dmidecode -t memory |
+  awk -F: '/Type:/ && $2 !~ /Unknown/ {print $2}' |
+  sort -u | tr '\n' ',' | sed 's/,$//')
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  MEM_SPEED=$(sudo dmidecode -t memory |
+  awk -F: '/Speed:/ && $2 !~ /Unknown/ {print $2}' |
+  sort -u | tr '\n' ',' | sed 's/,$//')
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  ECC_SUPPORT=$(sudo dmidecode -t memory |
+  awk -F: '/Error Correction Type/ {print $2; exit}' | xargs)
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  [ -z "$MEM_TYPE" ] && MEM_TYPE="확인불가"
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  [ -z "$MEM_SPEED" ] && MEM_SPEED="확인불가"
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  [ -z "$ECC_SUPPORT" ] && ECC_SUPPORT="확인불가"
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  [ -z "$MEM_MAX" ] && MEM_MAX="확인불가"
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  DISK_SUMMARY=$(lsblk -d -o NAME,TYPE,SIZE,MODEL,ROTA | tail -n +2 | tr '\n' '; ')
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  DISK_USAGE=$(df -h --total | awk '/total/ {print $3 "/" $2}')
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  SSD_LIFE=""
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  for d in $(lsblk -dno NAME,TYPE | awk '$2=="disk"{print $1}'); do   dev="/dev/$d"
+  if [[ "$d" == nvme* ]]; then     PU=$(sudo smartctl -a "$dev" 2>/dev/null | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2}' | xargs);     if [[ -n "$PU" ]]; then
+      REM=$((100 - PU));       SSD_LIFE+="$d:남은수명 ${REM}%(Percent Used ${PU}%); ";       continue;     fi;   fi
+  OUT=$(sudo smartctl -a "$dev" 2>/dev/null);   if [[ -n "$OUT" ]]; then
+    PLR=$(echo "$OUT" | awk '/Percent_Lifetime_Remain/ {print $NF; exit}');     if [[ -n "$PLR" && "$PLR" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${PLR}%(Percent_Lifetime_Remain); ";       continue;     fi
+    MWI=$(echo "$OUT" | awk '/Media_Wearout_Indicator/ {print $NF; exit}');     if [[ -n "$MWI" && "$MWI" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:남은수명 ${MWI}%(Media_Wearout_Indicator); ";       continue;     fi
+    PU2=$(echo "$OUT" | awk -F: '/Percentage Used/ {gsub(/%/,"",$2); print $2; exit}' | xargs);     if [[ -n "$PU2" && "$PU2" =~ ^[0-9]+$ ]]; then       REM2=$((100 - PU2));       SSD_LIFE+="$d:남은수명 ${REM2}%(Percentage Used ${PU2}%); ";       continue;     fi
+    WLC=$(echo "$OUT" | awk '/Wear_Leveling_Count/ {print $NF; exit}');     if [[ -n "$WLC" && "$WLC" =~ ^[0-9]+$ ]]; then       SSD_LIFE+="$d:참고 Wear_Leveling_Count=${WLC}; ";       continue;     fi;   fi; done
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  [ -z "$SSD_LIFE" ] && SSD_LIFE="확인불가( smartctl / 권한 / 디바이스 미지원 )"
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  GPU=$(lspci | grep -i -E "vga|3d" | awk -F: '{print $3}' | xargs)
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  [ -z "$GPU" ] && GPU="없음"
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  IFACE=$(ip route | awk '/default/ {print $5; exit}')
+2026-02-10 11:51:41 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:41  IP_ADDR=$(ip -4 addr show "$IFACE" | awk '/inet / {print $2}' | cut -d/ -f1)
+2026-02-10 11:51:42 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:42  MAC_ADDR=$(cat /sys/class/net/"$IFACE"/address)
+2026-02-10 11:51:42 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:42  NIC_SPEED=$(ethtool "$IFACE" 2>/dev/null | awk -F: '/Speed/ {print $2}' | xargs)
+2026-02-10 11:51:42 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:42  [ -z "$NIC_SPEED" ] && NIC_SPEED="확인불가"
+2026-02-10 11:51:42 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:42  VIRT=$(egrep -c '(vmx|svm)' /proc/cpuinfo)
+2026-02-10 11:51:42 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:42  [ "$VIRT" -gt 0 ] && VIRT="가능" || VIRT="불가"
+2026-02-10 11:51:42 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:42  [ "$VIRT" -gt 0 ] && VIRT="가능" || VIRT="불가"
+2026-02-10 11:51:42 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:42  echo "$HOST|$OS|$KERNEL|$CPU_MODEL|$CPU_CORES|$MEM_TOTAL|$MEM_MAX|$MEM_TYPE|$MEM_SPEED|$ECC_SUPPORT|$DISK_SUMMARY|$DISK_USAGE|$SSD_LIFE|$GPU|$IFACE|$IP_ADDR|$MAC_ADDR|$NIC_SPEED|$VIRT"
+2026-02-10 11:51:42 [714181] onycom@master:/home/onycom -> 2026-02-10 11:51:42  echo "$HOST|$OS|$KERNEL|$CPU_MODEL|$CPU_CORES|$MEM_TOTAL|$MEM_MAX|$MEM_TYPE|$MEM_SPEED|$ECC_SUPPORT|$DISK_SUMMARY|$DISK_USAGE|$SSD_LIFE|$GPU|$IFACE|$IP_ADDR|$MAC_ADDR|$NIC_SPEED|$VIRT"
