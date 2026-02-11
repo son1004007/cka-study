@@ -1,0 +1,9 @@
+2026-02-11 13:45:00 [1096093] onycom@master:/home/onycom -> 
+2026-02-11 13:45:00 [1096093] onycom@master:/home/onycom -> 
+2026-02-11 13:45:00 [1096093] onycom@master:/home/onycom -> 2026-02-10 11:51:42  echo "$HOST|$OS|$KERNEL|$CPU_MODEL|$CPU_CORES|$MEM_TOTAL|$MEM_MAX|$MEM_TYPE|$MEM_SPEED|$ECC_SUPPORT|$DISK_SUMMARY|$DISK_USAGE|$SSD_LIFE|$GPU|$IFACE|$IP_ADDR|$MAC_ADDR|$NIC_SPEED|$VIRT"
+2026-02-11 13:45:01 [1096093] onycom@master:/home/onycom -> 2026-02-11 13:45:01  Supermicro|X9SRE/X9SRE-3F/X9SRi/X9SRi-3F
+2026-02-11 13:45:01 [1096093] onycom@master:/home/onycom -> 2026-02-11 13:45:01  Supermicro|X9SRE/X9SRE-3F/X9SRi/X9SRi-3F
+2026-02-11 13:45:03 [1096093] onycom@master:/home/onycom -> 2026-02-11 13:45:01  Supermicro|X9SRE/X9SRE-3F/X9SRi/X9SRi-3F
+2026-02-11 13:45:06 [1096093] onycom@master:/home/onycom -> 2026-02-11 13:45:06  echo "$(cat /sys/class/dmi/id/board_vendor 2>/dev/null)|$(cat /sys/class/dmi/id/board_name 2>/dev/null)"
+2026-02-11 13:45:06 [1096093] onycom@master:/home/onycom -> 2026-02-11 13:45:06  echo "$(cat /sys/class/dmi/id/board_vendor 2>/dev/null)|$(cat /sys/class/dmi/id/board_name 2>/dev/null)"
+2026-02-11 13:45:22 [1096093] onycom@master:/home/onycom -> 2026-02-11 13:45:22  exit
